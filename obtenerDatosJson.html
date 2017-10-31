@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Obtener datos de un json usando botones</title>
+</head>
+<body>
+	<p id="mostrar"></p>
+	<button onclick(mostrarP())>Mostrar personas</button>
+	<button onclick(mostrarM())>Mostrar mayores de edad</button>
+	<script>
+		var personas = [
+			{"nombre":"Andres Salgado"    , "edad": 25},
+			{"nombre":"Camila Perez"      , "edad": 12},
+			{"nombre":"David Gutierrez"   , "edad": 89},
+			{"nombre":"Stiven Gordillo"   , "edad": 33},
+			{"nombre":"Mariana Gordillo"  , "edad":  4},
+			{"nombre":"Elizabeth Herrera" , "edad": 32},
+			{"nombre":"sara Carrillo"     , "edad":  5},
+			{"nombre":"Monica hurtado"    , "edad":  1},
+			{"nombre":"Daniel Hernandez"  , "edad": 24},
+			{"nombre":"Pedro Morales"     , "edad": 45}
+		];
+		function mostrarPersonas(personas){
+			var sujetos = "--------------------- Personas --------------------<br>";
+			var i;
+			for(i=1 ; i <= personas.length ; i++){
+				sujetos += i". "+ json[i].nombre + " edad " + json[i].edad;
+			}
+			document.getElementById("mostrar").innerHTML= sujetos
+		}
+	</script>
+</body>
+</html>
